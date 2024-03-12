@@ -1,63 +1,63 @@
 <?php
 
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 
 declare(strict_types=1);
 
-namespace Elastic\Elasticsearch\Traits;
+namespace Elastic\Ogi\Traits;
 
-use Elastic\Elasticsearch\Endpoints\AsyncSearch;
-use Elastic\Elasticsearch\Endpoints\Autoscaling;
-use Elastic\Elasticsearch\Endpoints\Cat;
-use Elastic\Elasticsearch\Endpoints\Ccr;
-use Elastic\Elasticsearch\Endpoints\Cluster;
-use Elastic\Elasticsearch\Endpoints\Connector;
-use Elastic\Elasticsearch\Endpoints\ConnectorSyncJob;
-use Elastic\Elasticsearch\Endpoints\DanglingIndices;
-use Elastic\Elasticsearch\Endpoints\Enrich;
-use Elastic\Elasticsearch\Endpoints\Eql;
-use Elastic\Elasticsearch\Endpoints\Esql;
-use Elastic\Elasticsearch\Endpoints\Features;
-use Elastic\Elasticsearch\Endpoints\Fleet;
-use Elastic\Elasticsearch\Endpoints\Graph;
-use Elastic\Elasticsearch\Endpoints\Ilm;
-use Elastic\Elasticsearch\Endpoints\Indices;
-use Elastic\Elasticsearch\Endpoints\Inference;
-use Elastic\Elasticsearch\Endpoints\Ingest;
-use Elastic\Elasticsearch\Endpoints\License;
-use Elastic\Elasticsearch\Endpoints\Logstash;
-use Elastic\Elasticsearch\Endpoints\Migration;
-use Elastic\Elasticsearch\Endpoints\Ml;
-use Elastic\Elasticsearch\Endpoints\Monitoring;
-use Elastic\Elasticsearch\Endpoints\Nodes;
-use Elastic\Elasticsearch\Endpoints\Profiling;
-use Elastic\Elasticsearch\Endpoints\QueryRuleset;
-use Elastic\Elasticsearch\Endpoints\Rollup;
-use Elastic\Elasticsearch\Endpoints\SearchApplication;
-use Elastic\Elasticsearch\Endpoints\SearchableSnapshots;
-use Elastic\Elasticsearch\Endpoints\Security;
-use Elastic\Elasticsearch\Endpoints\Shutdown;
-use Elastic\Elasticsearch\Endpoints\Simulate;
-use Elastic\Elasticsearch\Endpoints\Slm;
-use Elastic\Elasticsearch\Endpoints\Snapshot;
-use Elastic\Elasticsearch\Endpoints\Sql;
-use Elastic\Elasticsearch\Endpoints\Ssl;
-use Elastic\Elasticsearch\Endpoints\Synonyms;
-use Elastic\Elasticsearch\Endpoints\Tasks;
-use Elastic\Elasticsearch\Endpoints\TextStructure;
-use Elastic\Elasticsearch\Endpoints\Transform;
-use Elastic\Elasticsearch\Endpoints\Watcher;
-use Elastic\Elasticsearch\Endpoints\Xpack;
+use Elastic\Ogi\Endpoints\AsyncSearch;
+use Elastic\Ogi\Endpoints\Autoscaling;
+use Elastic\Ogi\Endpoints\Cat;
+use Elastic\Ogi\Endpoints\Ccr;
+use Elastic\Ogi\Endpoints\Cluster;
+use Elastic\Ogi\Endpoints\Connector;
+use Elastic\Ogi\Endpoints\ConnectorSyncJob;
+use Elastic\Ogi\Endpoints\DanglingIndices;
+use Elastic\Ogi\Endpoints\Enrich;
+use Elastic\Ogi\Endpoints\Eql;
+use Elastic\Ogi\Endpoints\Esql;
+use Elastic\Ogi\Endpoints\Features;
+use Elastic\Ogi\Endpoints\Fleet;
+use Elastic\Ogi\Endpoints\Graph;
+use Elastic\Ogi\Endpoints\Ilm;
+use Elastic\Ogi\Endpoints\Indices;
+use Elastic\Ogi\Endpoints\Inference;
+use Elastic\Ogi\Endpoints\Ingest;
+use Elastic\Ogi\Endpoints\License;
+use Elastic\Ogi\Endpoints\Logstash;
+use Elastic\Ogi\Endpoints\Migration;
+use Elastic\Ogi\Endpoints\Ml;
+use Elastic\Ogi\Endpoints\Monitoring;
+use Elastic\Ogi\Endpoints\Nodes;
+use Elastic\Ogi\Endpoints\Profiling;
+use Elastic\Ogi\Endpoints\QueryRuleset;
+use Elastic\Ogi\Endpoints\Rollup;
+use Elastic\Ogi\Endpoints\SearchApplication;
+use Elastic\Ogi\Endpoints\SearchableSnapshots;
+use Elastic\Ogi\Endpoints\Security;
+use Elastic\Ogi\Endpoints\Shutdown;
+use Elastic\Ogi\Endpoints\Simulate;
+use Elastic\Ogi\Endpoints\Slm;
+use Elastic\Ogi\Endpoints\Snapshot;
+use Elastic\Ogi\Endpoints\Sql;
+use Elastic\Ogi\Endpoints\Ssl;
+use Elastic\Ogi\Endpoints\Synonyms;
+use Elastic\Ogi\Endpoints\Tasks;
+use Elastic\Ogi\Endpoints\TextStructure;
+use Elastic\Ogi\Endpoints\Transform;
+use Elastic\Ogi\Endpoints\Watcher;
+use Elastic\Ogi\Endpoints\Xpack;
 
 /**
  * @generated This file is generated, please do not edit

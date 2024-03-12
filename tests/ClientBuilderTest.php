@@ -1,24 +1,24 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Tests;
+namespace Elastic\Ogi\Tests;
 
-use Elastic\Elasticsearch\Client;
-use Elastic\Elasticsearch\ClientBuilder;
-use Elastic\Elasticsearch\Exception\AuthenticationException;
-use Elastic\Elasticsearch\Exception\ConfigException;
-use Elastic\Elasticsearch\Exception\InvalidArgumentException;
+use Elastic\Ogi\Client;
+use Elastic\Ogi\ClientBuilder;
+use Elastic\Ogi\Exception\AuthenticationException;
+use Elastic\Ogi\Exception\ConfigException;
+use Elastic\Ogi\Exception\InvalidArgumentException;
 use Elastic\Transport\NodePool\NodePoolInterface;
 use Http\Client\HttpAsyncClient;
 use Nyholm\Psr7\Factory\Psr17Factory;

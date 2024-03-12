@@ -1,20 +1,20 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
 use Elastic\Transport\Exception\NoNodeAvailableException;
-use Elastic\Elasticsearch\Util\YamlTests;
-use Elastic\Elasticsearch\Tests\Utility;
+use Elastic\Ogi\Util\YamlTests;
+use Elastic\Ogi\Tests\Utility;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
@@ -45,7 +45,7 @@ $stack = getenv('TEST_SUITE');
 printf ("*****************************************\n");
 printf ("** Bulding YAML tests for %s suite\n", strtoupper($stack));
 printf ("*****************************************\n");
-printf ("Using Elasticsearch %s version\n", $version);
+printf ("Using Ogi %s version\n", $version);
 printf ("With build hash %s\n", $buildHash);
 
 $yamlOutputTest = __DIR__ . '/../tests/Yaml';

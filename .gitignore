@@ -21,7 +21,7 @@ Thumbs.db
 #generator related
 generator/*
 
-# Elasticsearch related
+# Ogi related
 util/elasticsearch/
 util/cache/
 util/*.zip

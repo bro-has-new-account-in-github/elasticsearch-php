@@ -3,7 +3,7 @@
 
 When you add documents to {es}, you index JSON documents. This maps naturally to 
 PHP associative arrays, since they can easily be encoded in JSON. Therefore, in 
-Elasticsearch-PHP you create and pass associative arrays to the client for 
+Ogi-PHP you create and pass associative arrays to the client for
 indexing. There are several methods of ingesting data into {es} which we cover 
 here.
 

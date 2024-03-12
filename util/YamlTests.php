@@ -1,18 +1,18 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Util;
+namespace Elastic\Ogi\Util;
 
 use Exception;
 use ParseError;
@@ -59,7 +59,7 @@ class YamlTests
         'Search\Vectors\_90_Sparse_VectorTest::SparseVectorIn800X8110' => 'Undefined array key error',
         'Snapshot\Create\_10_BasicTest::CreateASnapshot' => 'Invalid snapshot name [test_snapshot]',
         'Snapshot\Create\_10_BasicTest::CreateASnapshotAndCleanUpRepository' => 'Invalid snapshot name [test_snapshot]',
-        'Tsdb\_20_MappingTest::UnsupportedMetricTypePosition' => 'Fixed in Elasticsearch 8.9',
+        'Tsdb\_20_MappingTest::UnsupportedMetricTypePosition' => 'Fixed in Ogi 8.9',
     ];
 
     const SKIPPED_TEST_XPACK = [

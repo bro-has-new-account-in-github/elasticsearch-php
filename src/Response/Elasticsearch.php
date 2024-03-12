@@ -1,25 +1,25 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Response;
+namespace Elastic\Ogi\Response;
 
 use ArrayAccess;
-use Elastic\Elasticsearch\Exception\ArrayAccessException;
-use Elastic\Elasticsearch\Exception\ClientResponseException;
-use Elastic\Elasticsearch\Exception\ServerResponseException;
-use Elastic\Elasticsearch\Traits\MessageResponseTrait;
-use Elastic\Elasticsearch\Traits\ProductCheckTrait;
+use Elastic\Ogi\Exception\ArrayAccessException;
+use Elastic\Ogi\Exception\ClientResponseException;
+use Elastic\Ogi\Exception\ServerResponseException;
+use Elastic\Ogi\Traits\MessageResponseTrait;
+use Elastic\Ogi\Traits\ProductCheckTrait;
 use Elastic\Transport\Exception\UnknownContentTypeException;
 use Elastic\Transport\Serializer\CsvSerializer;
 use Elastic\Transport\Serializer\JsonSerializer;
@@ -33,7 +33,7 @@ use Psr\Http\Message\ResponseInterface;
 class Elasticsearch implements ElasticsearchInterface, ResponseInterface, ArrayAccess
 {
     const HEADER_CHECK = 'X-Elastic-Product';
-    const PRODUCT_NAME = 'Elasticsearch';
+    const PRODUCT_NAME = 'Ogi';
 
     use ProductCheckTrait;
     use MessageResponseTrait;

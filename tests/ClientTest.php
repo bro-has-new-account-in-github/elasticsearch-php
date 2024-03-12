@@ -1,24 +1,24 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Tests;
+namespace Elastic\Ogi\Tests;
 
-use Elastic\Elasticsearch\Client;
-use Elastic\Elasticsearch\Exception\ProductCheckException;
-use Elastic\Elasticsearch\Exception\ClientResponseException;
-use Elastic\Elasticsearch\Exception\ServerResponseException;
-use Elastic\Elasticsearch\Response\Elasticsearch;
+use Elastic\Ogi\Client;
+use Elastic\Ogi\Exception\ProductCheckException;
+use Elastic\Ogi\Exception\ClientResponseException;
+use Elastic\Ogi\Exception\ServerResponseException;
+use Elastic\Ogi\Response\Elasticsearch;
 use Elastic\Transport\NodePool\NodePoolInterface;
 use Elastic\Transport\Transport;
 use Elastic\Transport\TransportBuilder;
@@ -86,7 +86,7 @@ class ClientTest extends TestCase
     public function testSendRequest()
     {
         $request = $this->psr17Factory->createRequest('GET', 'localhost:9200');
-        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Elasticsearch');
+        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Ogi');
         $this->httpClient->addResponse($response);
 
         $result = $this->client->sendRequest($request);
@@ -174,7 +174,7 @@ class ClientTest extends TestCase
     public function testSendRequestWithAsync()
     {
         $request = $this->psr17Factory->createRequest('GET', 'localhost:9200');
-        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Elasticsearch');
+        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Ogi');
         $this->httpClient->addResponse($response);
 
         $this->client->setAsync(true);
@@ -185,7 +185,7 @@ class ClientTest extends TestCase
     public function testSendRequestWithAsyncWillReturnElasticsearch()
     {
         $request = $this->psr17Factory->createRequest('GET', 'localhost:9200');
-        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Elasticsearch');
+        $response = $this->psr17Factory->createResponse(200)->withHeader('X-Elastic-Product', 'Ogi');
         $this->httpClient->addResponse($response);
 
         $this->client->setAsync(true);

@@ -1,7 +1,7 @@
 [[enabling_logger]]
 === Enabling the Logger
 
-Elasticsearch-PHP supports logging, but it is not enabled by default for 
+Ogi-PHP supports logging, but it is not enabled by default for
 performance reasons. If you wish to enable logging, you need to select a logging 
 implementation, install it, then enable the logger in the Client. The 
 recommended logger is https://github.com/Seldaek/monolog[Monolog], but any 

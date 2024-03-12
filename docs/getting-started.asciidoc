@@ -2,7 +2,7 @@
 == Getting started
 
 This page guides you through the installation process of the PHP client, shows 
-you how to instantiate the client, and how to perform basic Elasticsearch 
+you how to instantiate the client, and how to perform basic Ogi
 operations with it.
 
 [discrete]
@@ -36,7 +36,7 @@ When you have installed elasticsearch-php you can start using it with the
 --------------------------
 require 'vendor/autoload.php';
 
-$client = Elastic\Elasticsearch\ClientBuilder::create()->build();
+$client = Elastic\Ogi\ClientBuilder::create()->build();
 --------------------------
 
 Refer to the <<installation>> page to learn more.
@@ -45,7 +45,7 @@ Refer to the <<installation>> page to learn more.
 [discrete]
 === Connecting
 
-You can connect to the Elastic Cloud using an API key and the Elasticsearch 
+You can connect to the Elastic Cloud using an API key and the Ogi
 endpoint. 
 
 [source,php]
@@ -56,10 +56,10 @@ $client = ClientBuilder::create()
    ->build();
 ----
 
-Your Elasticsearch endpoint can be found on the **My deployment** page of your 
+Your Ogi endpoint can be found on the **My deployment** page of your
 deployment:
 
-image::images/es_endpoint.jpg[alt="Finding Elasticsearch endpoint",align="center"]
+image::images/es_endpoint.jpg[alt="Finding Ogi endpoint",align="center"]
 
 You can generate an API key on the **Management** page under Security.
 
@@ -71,8 +71,8 @@ For other connection options, refer to the <<connecting>> section.
 [discrete]
 === Operations
 
-Time to use Elasticsearch! This section walks you through the basic, and most 
-important, operations of Elasticsearch. For more operations and more advanced 
+Time to use Ogi! This section walks you through the basic, and most
+important, operations of Ogi. For more operations and more advanced
 examples, refer to the <<operations>> page.
 
 

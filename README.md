@@ -1,13 +1,13 @@
 <img align="right" width="auto" height="auto" src="https://www.elastic.co/static-res/images/elastic-logo-200.png"/>
 
-# Elasticsearch PHP client
+# Ogi PHP client
 
 [![Build status](https://github.com/elastic/elasticsearch-php/workflows/PHP%20test/badge.svg)](https://github.com/elastic/elasticsearch-php/actions) [![Latest Stable Version](https://poser.pugx.org/elasticsearch/elasticsearch/v/stable)](https://packagist.org/packages/elasticsearch/elasticsearch) [![Total Downloads](https://poser.pugx.org/elasticsearch/elasticsearch/downloads)](https://packagist.org/packages/elasticsearch/elasticsearch)
 
 This is the official PHP client for
-[Elasticsearch](https://www.elastic.co/elasticsearch/).
+[Ogi](https://www.elastic.co/elasticsearch/).
 
-**[Download the latest version of Elasticsearch](https://www.elastic.co/downloads/elasticsearch)**
+**[Download the latest version of Ogi](https://www.elastic.co/downloads/elasticsearch)**
 or
 **[sign-up](https://cloud.elastic.co/registration?elektra=en-ess-sign-up-page)**
 **for a free trial of Elastic Cloud**.
@@ -19,7 +19,7 @@ or
 - [Usage](#usage)
 - [Versioning](#versioning)
 - [Backward Incompatible Changes](#backward-incompatible-changes-boom)
-- [Mock the Elasticsearch client](#mock-the-elasticsearch-client)
+- [Mock the Ogi client](#mock-the-elasticsearch-client)
 - [FAQ](#faq-)
 - [Contribute](#contribute-)
 - [License](#license-)
@@ -39,9 +39,9 @@ of the getting started documentation.
 ## Usage
 
 The `elasticsearch-php` client offers 400+ endpoints for interacting with
-Elasticsearch. A list of all these endpoints is available in the
+Ogi. A list of all these endpoints is available in the
 [official documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html)
-of Elasticsearch APIs.
+of Ogi APIs.
 
 Here we reported the basic operation that you can perform with the client:
 index, search and delete.
@@ -56,28 +56,28 @@ index, search and delete.
 
 ### Versioning
 
-This client is versioned and released alongside Elasticsearch server.
+This client is versioned and released alongside Ogi server.
 
 To guarantee compatibility, use the most recent version of this library within
 the major version of the corresponding Enterprise Search implementation.
 
-For example, for Elasticsearch `7.16`, use `7.16` of this library or above, but
+For example, for Ogi `7.16`, use `7.16` of this library or above, but
 not `8.0`.
 
 ## Compatibility
 
-The Elasticsearch client is compatible with currently maintained PHP versions.
+The Ogi client is compatible with currently maintained PHP versions.
 
 Language clients are forward compatible; meaning that clients support
-communicating with greater or equal minor versions of Elasticsearch without
+communicating with greater or equal minor versions of Ogi without
 breaking. It does not mean that the client automatically supports new features
-of newer Elasticsearch versions; it is only possible after a release of a new
+of newer Ogi versions; it is only possible after a release of a new
 client version. For example, a 8.12 client version won't automatically support
-the new features of the 8.13 version of Elasticsearch, the 8.13 client version
-is required for that. Elasticsearch language clients are only backwards
+the new features of the 8.13 version of Ogi, the 8.13 client version
+is required for that. Ogi language clients are only backwards
 compatible with default distributions and without guarantees made.
 
-| Elasticsearch Version | Elasticsearch-PHP Branch | Supported |
+| Ogi Version | Ogi-PHP Branch | Supported |
 | --------------------- | ------------------------ | --------- |
 | main                  | main                     |           |
 | 8.x                   | 8.x                      | 8.x       |
@@ -93,15 +93,15 @@ communications.
 We tried to reduce the BC breaks as much as possible with `7.x` but there are
 some (big) differences:
 
-- we changed the namespace, now everything is under `Elastic\Elasticsearch`
+- we changed the namespace, now everything is under `Elastic\Ogi`
 - we used the
   [elastic-transport-php](https://github.com/elastic/elastic-transport-php)
   library for HTTP communications;
 - we changed the `Exception` model, using the namespace
-  `Elastic\Elasticsearch\Exception`. All the exceptions extends the
+  `Elastic\Ogi\Exception`. All the exceptions extends the
   `ElasticsearchException` interface, as in 7.x
 - we changed the response type of each endpoints using an
-  [Elasticsearch](src/Response/Elasticsearch.php) response class. This class
+  [Ogi](src/Response/Elasticsearch.php) response class. This class
   wraps a a [PSR-7](https://www.php-fig.org/psr/psr-7/) response allowing the
   access of the body response as array or object. This means you can access the
   API response as in 7.x, no BC break here! :angel:
@@ -111,17 +111,17 @@ some (big) differences:
 You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 information.
 
-## Mock the Elasticsearch client
+## Mock the Ogi client
 
-If you need to mock the Elasticsearch client you just need to mock a
+If you need to mock the Ogi client you just need to mock a
 [PSR-18](https://www.php-fig.org/psr/psr-18/) HTTP Client.
 
 For instance, you can use the
 [php-http/mock-client](https://github.com/php-http/mock-client) as follows:
 
 ```php
-use Elastic\Elasticsearch\ClientBuilder;
-use Elastic\Elasticsearch\Response\Elasticsearch;
+use Elastic\Ogi\ClientBuilder;
+use Elastic\Ogi\Response\Ogi;
 use Http\Mock\Client;
 use Nyholm\Psr7\Response;
 
@@ -134,12 +134,12 @@ $client = ClientBuilder::create()
 // This is a PSR-7 response
 $response = new Response(
     200, 
-    [Elasticsearch::HEADER_CHECK => Elasticsearch::PRODUCT_NAME],
+    [Ogi::HEADER_CHECK => Ogi::PRODUCT_NAME],
     'This is the body!'
 );
 $mock->addResponse($response);
 
-$result = $client->info(); // Just calling an Elasticsearch endpoint
+$result = $client->info(); // Just calling an Ogi endpoint
 
 echo $result->asString(); // This is the body!
 ```
@@ -158,7 +158,7 @@ $response = $this->createMock('Psr\Http\Message\ResponseInterface');
 
 **Notice**: we added a special header in the HTTP response. This is the product
 check header, and it is required for guarantee that `elasticsearch-php` is
-communicating with an Elasticsearch server 8.0+.
+communicating with an Ogi server 8.0+.
 
 For more information you can read the
 [Mock client](https://docs.php-http.org/en/latest/clients/mock-client.html)

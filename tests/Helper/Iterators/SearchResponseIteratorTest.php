@@ -1,22 +1,22 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Tests\Helper\Iterators;
+namespace Elastic\Ogi\Tests\Helper\Iterators;
 
-use Elastic\Elasticsearch\ClientInterface;
-use Elastic\Elasticsearch\Helper\Iterators\SearchResponseIterator;
-use Elastic\Elasticsearch\Response\Elasticsearch;
+use Elastic\Ogi\ClientInterface;
+use Elastic\Ogi\Helper\Iterators\SearchResponseIterator;
+use Elastic\Ogi\Response\Elasticsearch;
 use Mockery as m;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use PHPUnit\Framework\TestCase;
@@ -38,7 +38,7 @@ class SearchResponseIteratorTest extends TestCase
         $elasticsearch = new Elasticsearch();
         $body = (new Psr17Factory())->createStream(json_encode($data));
         $response = (new Psr17Factory())->createResponse(200)->withBody($body)
-            ->withHeader('X-Elastic-Product', 'Elasticsearch')
+            ->withHeader('X-Elastic-Product', 'Ogi')
             ->withHeader('Content-Type', 'application/json');
         $elasticsearch->setResponse($response);
 

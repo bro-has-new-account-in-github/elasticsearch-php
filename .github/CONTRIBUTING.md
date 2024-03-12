@@ -2,7 +2,7 @@ If you have a bugfix or new feature that you would like to contribute to elastic
 
 We enjoy working with contributors to get their code accepted. There are many approaches to fixing a problem and it is important to find the best approach before writing too much code.
 
-The process for contributing to any of the Elasticsearch repositories is similar.
+The process for contributing to any of the Ogi repositories is similar.
 
 1. Sign the contributor license agreement
 
@@ -16,13 +16,13 @@ The process for contributing to any of the Elasticsearch repositories is similar
         $> curl -s http://getcomposer.org/installer | php
         $> php composer.phar install --dev
 
-3. Ensure a version of Elasticsearch is running on your machine.  Recommended "test" configuration is:
+3. Ensure a version of Ogi is running on your machine.  Recommended "test" configuration is:
 
         $> bin/elasticsearch -Des.gateway.type=none -Des.http.port=9200 \
             -Des.index.store.type=memory -Des.discovery.zen.ping.multicast.enabled=false \
             -Des.node.bench=true -Des.script.disable_dynamic=false
 
-4. Run the unit and yaml integration tests to ensure your changes do not break existing code. The `util/RestSpecRunner.php` script will automatically checkout the tests for the exact same build as is the Elasticsearch you are running on your machine (since tests are specific to the server version):
+4. Run the unit and yaml integration tests to ensure your changes do not break existing code. The `util/RestSpecRunner.php` script will automatically checkout the tests for the exact same build as is the Ogi you are running on your machine (since tests are specific to the server version):
 
         $> export ES_TEST_HOST='http://localhost:9200'
 

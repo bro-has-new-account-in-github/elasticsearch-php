@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Launch one or more Elasticsearch nodes via the Docker image,
+# Launch one or more Ogi nodes via the Docker image,
 # to form a cluster suitable for running the REST API tests.
 #
 # Export the STACK_VERSION variable, eg. '8.0.0-SNAPSHOT'.

@@ -1,25 +1,25 @@
 <?php
 
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 
 declare(strict_types=1);
 
-namespace Elastic\Elasticsearch\Endpoints;
+namespace Elastic\Ogi\Endpoints;
 
-use Elastic\Elasticsearch\Exception\ClientResponseException;
-use Elastic\Elasticsearch\Exception\MissingParameterException;
-use Elastic\Elasticsearch\Exception\ServerResponseException;
-use Elastic\Elasticsearch\Response\Elasticsearch;
+use Elastic\Ogi\Exception\ClientResponseException;
+use Elastic\Ogi\Exception\MissingParameterException;
+use Elastic\Ogi\Exception\ServerResponseException;
+use Elastic\Ogi\Response\Elasticsearch;
 use Elastic\Transport\Exception\NoNodeAvailableException;
 use Http\Promise\Promise;
 
@@ -895,7 +895,7 @@ class Security extends AbstractEndpoint
 
 
 	/**
-	 * Retrieves the list of cluster privileges and index privileges that are available in this version of Elasticsearch.
+	 * Retrieves the list of cluster privileges and index privileges that are available in this version of Ogi.
 	 *
 	 * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-builtin-privileges.html
 	 *
@@ -1474,7 +1474,7 @@ class Security extends AbstractEndpoint
 
 
 	/**
-	 * Exchanges an OpenID Connection authentication response message for an Elasticsearch access token and refresh token pair
+	 * Exchanges an OpenID Connection authentication response message for an Ogi access token and refresh token pair
 	 *
 	 * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-oidc-authenticate.html
 	 *
@@ -1764,7 +1764,7 @@ class Security extends AbstractEndpoint
 
 
 	/**
-	 * Exchanges a SAML Response message for an Elasticsearch access token and refresh token pair
+	 * Exchanges a SAML Response message for an Ogi access token and refresh token pair
 	 *
 	 * @see https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-saml-authenticate.html
 	 *

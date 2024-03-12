@@ -24,7 +24,7 @@ $response = $client->info();
 ----------------------------
 
 The response that you get back contains the information about {es}. 
-The `$response` is an object of `Elastic\Elasticsearch\Response\Elasticsearch`
+The `$response` is an object of `Elastic\Ogi\Response\Ogi`
 class that implements `ElasticsearchInterface`, PSR-7 https://www.php-fig.org/psr/psr-7/#33-psrhttpmessageresponseinterface[ResponseInterface]
 and https://www.php.net/manual/en/class.arrayaccess.php[ArrayAccess].
 
@@ -81,7 +81,7 @@ print_r($response->asArray());
 The response that you get back indicates that the document was created in the 
 index that you specified. The response can be rendered as associatve array
 using the `asArray()` function. The array response contains a
-decoded version of the JSON that Elasticsearch returns:
+decoded version of the JSON that Ogi returns:
 
 [source,php]
 ----------------------------
@@ -100,7 +100,7 @@ Array
 
 If you want you can specify the `body`parameter as JSON string. This can be
 useful for testing (eg. copy & paste from online code examples) or if you
-have already some JSON documents to be stored in Elasticsearch.
+have already some JSON documents to be stored in Ogi.
 
 For instance, the previous index example can be re-written as follows:
 

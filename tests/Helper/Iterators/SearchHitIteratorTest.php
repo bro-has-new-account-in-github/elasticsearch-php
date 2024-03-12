@@ -1,21 +1,21 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Tests\Helper\Iterators;
+namespace Elastic\Ogi\Tests\Helper\Iterators;
 
-use Elastic\Elasticsearch\Helper\Iterators\SearchHitIterator;
-use Elastic\Elasticsearch\Helper\Iterators\SearchResponseIterator;
+use Elastic\Ogi\Helper\Iterators\SearchHitIterator;
+use Elastic\Ogi\Helper\Iterators\SearchResponseIterator;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 

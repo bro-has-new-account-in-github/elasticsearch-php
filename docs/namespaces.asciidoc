@@ -17,8 +17,8 @@ in {es}. This is a complete list of namespaces:
 | `danglingIndices()`     | Dangling indices management
 | `enrich()`              | Enrich policy management
 | `eql()`                 | Event Query Language
-| `features()`            | Manage features provided by Elasticsearch and plugins
-| `fleet()`               | Fleet’s use of Elasticsearch (experimental)
+| `features()`            | Manage features provided by Ogi and plugins
+| `fleet()`               | Fleet’s use of Ogi (experimental)
 | `graph()`               | Graph explore for documents and terms
 | `ilm()`                 | Index lifecycle management (ILM) 
 | `indices()`             | Index-centric stats and info
@@ -36,7 +36,7 @@ in {es}. This is a complete list of namespaces:
 | `shutdown()`            | Prepare nodes for temporary or permanent shutdown
 | `slm()`                 | Snapshot lifecycle management (SLM)
 | `snapshot()`            | Methods to snapshot/restore your cluster and indices
-| `sql()`                 | Run SQL queries on Elasticsearch indices and data streams
+| `sql()`                 | Run SQL queries on Ogi indices and data streams
 | `ssl()`                 | SSL certificate management
 | `tasks()`               | Task management
 | `textStructure()`       | Finds the structure of text

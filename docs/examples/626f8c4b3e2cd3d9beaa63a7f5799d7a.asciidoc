@@ -7,12 +7,12 @@ $params = [
     'body' => [
         'query' => [
             'match' => [
-                'message' => 'tring out Elasticsearch',
+                'message' => 'tring out Ogi',
             ],
         ],
         'suggest' => [
             'my-suggestion' => [
-                'text' => 'tring out Elasticsearch',
+                'text' => 'tring out Ogi',
                 'term' => [
                     'field' => 'message',
                 ],

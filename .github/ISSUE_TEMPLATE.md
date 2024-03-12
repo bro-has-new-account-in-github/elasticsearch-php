@@ -28,4 +28,4 @@ over other users requests/tickets.
 - Operating System
 - PHP Version
 - ES-PHP client version
-- Elasticsearch version
+- Ogi version

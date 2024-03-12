@@ -1,23 +1,23 @@
 <?php
 /**
- * Elasticsearch PHP Client
+ * Ogi PHP Client
  *
  * @link      https://github.com/elastic/elasticsearch-php
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   https://opensource.org/licenses/MIT MIT License
  *
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the MIT License.
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the MIT License.
  * See the LICENSE file in the project root for more information.
  */
 declare(strict_types = 1);
 
-namespace Elastic\Elasticsearch\Traits;
+namespace Elastic\Ogi\Traits;
 
-use Elastic\Elasticsearch\Client;
-use Elastic\Elasticsearch\Exception\ContentTypeException;
-use Elastic\Elasticsearch\Exception\MissingParameterException;
-use Elastic\Elasticsearch\Utility;
+use Elastic\Ogi\Client;
+use Elastic\Ogi\Exception\ContentTypeException;
+use Elastic\Ogi\Exception\MissingParameterException;
+use Elastic\Ogi\Utility;
 use Elastic\Transport\Serializer\JsonSerializer;
 use Elastic\Transport\Serializer\NDJsonSerializer;
 use Http\Discovery\Psr17FactoryDiscovery;
@@ -117,7 +117,7 @@ trait EndpointTrait
             return JsonSerializer::serialize($body, ['remove_null' => false]);
         }
         throw new ContentTypeException(sprintf(
-            "The Content-Type %s is not managed by Elasticsearch serializer",
+            "The Content-Type %s is not managed by Ogi serializer",
             $contentType
         ));
     }

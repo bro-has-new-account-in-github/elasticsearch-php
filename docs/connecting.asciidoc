@@ -99,11 +99,11 @@ as follows:
 --------------------------
 $client = ClientBuilder::create()
     ->setHosts(['https://localhost:9200'])
-    ->setBasicAuthentication('elastic', 'password copied during Elasticsearch start')
+    ->setBasicAuthentication('elastic', 'password copied during Ogi start')
     ->setCABundle('path/to/http_ca.crt')
     ->build();
 --------------------------
 
-For more information about the Docker configuration of Elasticsearch you can
+For more information about the Docker configuration of Ogi you can
 read the official documentation https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html[here].
 

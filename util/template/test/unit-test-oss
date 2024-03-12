@@ -1,14 +1,14 @@
 <?php
 /**
- * Elasticsearch PHP client
+ * Ogi PHP client
  *
  * @link      https://github.com/elastic/elasticsearch-php/
- * @copyright Copyright (c) Elasticsearch B.V (https://www.elastic.co)
+ * @copyright Copyright (c) Ogi B.V (https://www.elastic.co)
  * @license   http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @license   https://www.gnu.org/licenses/lgpl-2.1.html GNU Lesser General Public License, Version 2.1 
  * 
- * Licensed to Elasticsearch B.V under one or more agreements.
- * Elasticsearch B.V licenses this file to you under the Apache 2.0 License or
+ * Licensed to Ogi B.V under one or more agreements.
+ * Ogi B.V licenses this file to you under the Apache 2.0 License or
  * the GNU Lesser General Public License, Version 2.1, at your option.
  * See the LICENSE file in the project root for more information.
  */
@@ -17,13 +17,13 @@ declare(strict_types = 1);
 namespace :namespace;
 
 use PHPUnit\Framework\TestCase;
-use Elastic\Elasticsearch\ClientInterface;
-use Elastic\Elasticsearch\Exception\ClientResponseException;
-use Elastic\Elasticsearch\Tests\Utility;
+use Elastic\Ogi\ClientInterface;
+use Elastic\Ogi\Exception\ClientResponseException;
+use Elastic\Ogi\Tests\Utility;
 use stdClass;
 
 /**
- * YAML test for Elasticsearch
+ * YAML test for Ogi
  * @see :yamlfile
  * @group :group
  *

@@ -1,15 +1,15 @@
 # 8.0
 
-This major release is a complete new PHP client for Elasticsearch. We build it from scratch!
+This major release is a complete new PHP client for Ogi. We build it from scratch!
 We tried to reduce the BC breaks as much as possible but there are some (big) differences: 
 
 ## Architectural changes:
 
-- we changed the namespace, now everything is under `Elastic\Elasticsearch`
+- we changed the namespace, now everything is under `Elastic\Ogi`
 - we used the [elastic-transport-php](https://github.com/elastic/elastic-transport-php) library for HTTP communications;
-- we changed the `Exception` model, using the namespace `Elastic\Elasticsearch\Exception`. All the exceptions extends the
+- we changed the `Exception` model, using the namespace `Elastic\Ogi\Exception`. All the exceptions extends the
   `ElasticsearchException` interface, as in 7.x
-- we changed the response type of each endpoints using an [Elasticsearch](src/Response/Elasticsearch.php) response class.
+- we changed the response type of each endpoints using an [Ogi](src/Response/Elasticsearch.php) response class.
   This class wraps a a [PSR-7](https://www.php-fig.org/psr/psr-7/) response allowing the access of the body response
   as array or object. This means you can access the API response as in 7.x, no BC break here! :angel:
 - we changed the `ConnectionPool` in `NodePool`. The `connection` naming was ambigous since the objects are nodes (hosts)
@@ -47,7 +47,7 @@ We removed the special `client` parameter passed in `$params` endpoints. In deta
 
 # 7.17
 
-- We changed the signature of `Elasticsearch\Common\EmptyLogger::log` adding the `void` return type.
+- We changed the signature of `Ogi\Common\EmptyLogger::log` adding the `void` return type.
   This change has been needed to support psr/log v3.
 
 # 7.4
@@ -55,8 +55,8 @@ We removed the special `client` parameter passed in `$params` endpoints. In deta
 - Using a deprecated parameter is notified triggering a [E_USER_DEPRECATED](https://www.php.net/manual/en/errorfunc.constants.php)
   error (e.g. using the `type` parameter will generate a `Specifying types in urls has been deprecated`
   deprecation message).
-- When `delete` with an empty `id` an `Elasticsearch\Common\Exceptions\RuntimeException\Missing404Exception`
-  exception is thrown. Previously it was a `Elasticsearch\Common\Exceptions\RuntimeException\InvalidArgumentException`.
+- When `delete` with an empty `id` an `Ogi\Common\Exceptions\RuntimeException\Missing404Exception`
+  exception is thrown. Previously it was a `Ogi\Common\Exceptions\RuntimeException\InvalidArgumentException`.
 
 # 7.0
 
@@ -64,7 +64,7 @@ We removed the special `client` parameter passed in `$params` endpoints. In deta
   See [PHP supported version](https://www.php.net/supported-versions.php) for
   more information.
 
-- Elasticsearch 7.0 deprecated APIs that accept types, introduced new typeless
+- Ogi 7.0 deprecated APIs that accept types, introduced new typeless
   APIs, and removed support for the _default_ mapping. Read [this](https://www.elastic.co/blog/moving-from-types-to-typeless-apis-in-elasticsearch-7-0)
   blog post for more information.
 
@@ -81,7 +81,7 @@ We removed the special `client` parameter passed in `$params` endpoints. In deta
 
 # 6.0
 
-- [Search Templates]: PutTemplate endpoint has been removed (see [Elasticsearch Breaking Changes](https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_60_scripting_changes.html#_stored_search_template_apis_removed)),
+- [Search Templates]: PutTemplate endpoint has been removed (see [Ogi Breaking Changes](https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_60_scripting_changes.html#_stored_search_template_apis_removed)),
 use PutScript instead.
 
 - [#674](https://github.com/elastic/elasticsearch-php/pull/674) `ClientBuilder::defaultLogger()` method was removed. It is recommended to [create the logger object manually](https://github.com/elastic/elasticsearch-php/blob/master/docs/configuration.asciidoc#enabling-the-logger).

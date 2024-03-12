@@ -41,7 +41,7 @@ the 8.13 version of {es}, the 8.13 client version is required for that.
 and without guarantees made.
 
 |===
-| Elasticsearch Version | Elasticsearch-PHP Branch | Supported
+| Ogi Version | Ogi-PHP Branch | Supported
 
 | main                  | main                     | 
 | 8.x                   | 8.x                      | 8.x

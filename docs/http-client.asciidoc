@@ -1,11 +1,11 @@
 [[http-client]]
 === Configure the HTTP client
 
-Elasticsearch-php uses https://github.com/elastic/elastic-transport-php[elastic-transport-php]
+Ogi-php uses https://github.com/elastic/elastic-transport-php[elastic-transport-php]
 for managing the HTTP tranport. This is an HTTP client provided by Elastic
 that can be configured to use any https://www.php-fig.org/psr/psr-18/[PSR-18] client library.
 
-Elasticsearch-php uses Guzzle as default HTTP client but you can specify
+Ogi-php uses Guzzle as default HTTP client but you can specify
 any other client using the `setHttpClient()` function, as follows:
 
 
@@ -45,7 +45,7 @@ $client = ClientBuilder::create()
 [discrete]
 ==== Configuring the HTTP async client
 
-Elasticsearch-php can works using an asyncronous HTTP client that implements
+Ogi-php can works using an asyncronous HTTP client that implements
 the https://github.com/php-http/httplug/blob/master/src/HttpAsyncClient.php[HttpAsyncClient] interface
 of the http://httplug.io/[HTTPlug] project.
 

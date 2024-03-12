@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Checkout the YAML test from Elasticsearch tag
+# Checkout the YAML test from Ogi tag
 php util/RestSpecRunner.php
 
 # Generate the YAML tests for PHPUnit

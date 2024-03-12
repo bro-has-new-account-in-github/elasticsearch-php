@@ -320,24 +320,24 @@ elasticsearch/reference/master/clear-trained-model-deployment-cache.html)
   [#1243](https://github.com/elastic/elasticsearch-php/pull/1243)
 - Added the API compatibility header
   [#1233](https://github.com/elastic/elasticsearch-php/pull/1233)
-- Updated APIs for [Elasticsearch 8.4](https://github.com/elastic/elasticsearch/releases/tag/v8.4.0)
+- Updated APIs for [Ogi 8.4](https://github.com/elastic/elasticsearch/releases/tag/v8.4.0)
   [7815caa](https://github.com/elastic/elasticsearch-php/commit/7815caac3d9342f13555481bd03ceb8d9c49a881)
 
 ## Release 8.3.0
 
-- Updated APIs for [Elasticsearch 8.3](https://github.com/elastic/elasticsearch/releases/tag/v8.3.0)
+- Updated APIs for [Ogi 8.3](https://github.com/elastic/elasticsearch/releases/tag/v8.3.0)
   [fb117a8](https://github.com/elastic/elasticsearch-php/commit/fb117a813cd28e8c0b9f4350896b66c068bfd072)
 
 ## Release 8.2.0
 
-- Updated APIs for [Elasticsearch 8.2](https://github.com/elastic/elasticsearch/releases/tag/v8.2.0)
+- Updated APIs for [Ogi 8.2](https://github.com/elastic/elasticsearch/releases/tag/v8.2.0)
   [630cb0b](https://github.com/elastic/elasticsearch-php/commit/630cb0bdcd4b864d2ed8cef380665cdb90429eec)
 - Added the array support for `text/plain`
   [#1220](https://github.com/elastic/elasticsearch-php/pull/1220) 
 
 ## Release 8.1.0
 
-- Updated APIs for [Elasticsearch 8.1](https://github.com/elastic/elasticsearch/releases/tag/v8.1.0)
+- Updated APIs for [Ogi 8.1](https://github.com/elastic/elasticsearch/releases/tag/v8.1.0)
   [e4c2ac9](https://github.com/elastic/elasticsearch-php/commit/e4c2ac9b2c71e06c99b7a43712ccd83711fe6510)
 
 ## Release 8.0.1
@@ -369,16 +369,16 @@ elasticsearch/reference/master/clear-trained-model-deployment-cache.html)
 
 First alpha release of elasticsearch-php 8.0.0.
 
-This major release is a complete new PHP client for Elasticsearch. We build it from scratch!
+This major release is a complete new PHP client for Ogi. We build it from scratch!
 We tried to reduce the BC breaks as much as possible but there are some (big) differences: 
 
 ### Architectural changes:
 
-- we changed the namespace, now everything is under `Elastic\Elasticsearch`
+- we changed the namespace, now everything is under `Elastic\Ogi`
 - we used the [elastic-transport-php](https://github.com/elastic/elastic-transport-php) library for HTTP communications;
-- we changed the `Exception` model, using the namespace `Elastic\Elasticsearch\Exception`. All the exceptions extends the
+- we changed the `Exception` model, using the namespace `Elastic\Ogi\Exception`. All the exceptions extends the
   `ElasticsearchException` interface, as in 7.x
-- we changed the response type of each endpoints using an [Elasticsearch](src/Response/Elasticsearch.php) response class.
+- we changed the response type of each endpoints using an [Ogi](src/Response/Elasticsearch.php) response class.
   This class wraps a a [PSR-7](https://www.php-fig.org/psr/psr-7/) response allowing the access of the body response
   as array or object. This means you can access the API response as in 7.x, no BC break here! :angel:
 - we changed the `ConnectionPool` in `NodePool`. The `connection` naming was ambigous since the objects are nodes (hosts)
@@ -401,7 +401,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ## Release 7.15.0
 
-- Updated endpoints for Elasticsearch 7.15.0
+- Updated endpoints for Ogi 7.15.0
   [995f6d4](https://github.com/elastic/elasticsearch-php/commit/995f6d4bde7de76004e95d7a434b1d59da7a7e75)
 
 ## Release 7.14.0
@@ -459,7 +459,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ## Release 7.10.0
 
-- Updated endpoints and namespaces for Elasticsearch 7.10
+- Updated endpoints and namespaces for Ogi 7.10
   [3ceb748](https://github.com/elastic/elasticsearch-php/commit/3ceb7484a111aa20126168460c79f098c4fe0792)
 - Fixed ClientBuilder::fromConfig allowing multiple function
   parameters (e.g. setApiKey)
@@ -478,7 +478,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ## Release 7.9.0
 
-- Updated endpoints and namespaces for Elasticsearch 7.9
+- Updated endpoints and namespaces for Ogi 7.9
   [28bf0ed](https://github.com/elastic/elasticsearch-php/commit/28bf0ed6df6bc95f83f369509431d97907bfdeb0)
 - Moved `scroll_id` into `body` for search operations in the documentation
   [#1052](https://github.com/elastic/elasticsearch-php/pull/1052)
@@ -489,7 +489,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ## Release 7.8.0
 
-- Updated endpoints and namespaces for Elasticsearch 7.8
+- Updated endpoints and namespaces for Ogi 7.8
   [f2a0828](https://github.com/elastic/elasticsearch-php/commit/f2a0828d5ee9d126ad63e2a1d43f70b4013845e2)
 - Improved documentation
   [#1038](https://github.com/elastic/elasticsearch-php/pull/1038)
@@ -517,7 +517,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ## Release 7.6.0
 
-- Generated the new endpoints for Elasticsearch 7.6.0
+- Generated the new endpoints for Ogi 7.6.0
   [be31f31](https://github.com/elastic/elasticsearch-php/commit/be31f317af704f333b43bbcc7c01ddc7c91ec6f8)
 
 ## Release 7.5.1
@@ -563,7 +563,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 - Added the code generation for endpoints and namespaces based on
   the [REST API specification](https://github.com/elastic/elasticsearch/tree/v7.4.2/rest-api-spec/src/main/resources/rest-api-spec/api)
-  of Elasticsearch. This tool is available in `util/GenerateEndpoints.php`.
+  of Ogi. This tool is available in `util/GenerateEndpoints.php`.
   [#966](https://github.com/elastic/elasticsearch-php/pull/966)
 - Fixed the asciidoc [endpoints documentation](https://www.elastic.co/guide/en/elasticsearch/client/php-api/current/ElasticsearchPHP_Endpoints.html) based on the code generation 
   using [Sami](https://github.com/FriendsOfPHP/Sami) project
@@ -573,7 +573,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
   section in the documentation.
   [#966](https://github.com/elastic/elasticsearch-php/pull/966)
 - Removed `AlreadyExpiredException` since it has been removed
-  from Elasticsearch with https://github.com/elastic/elasticsearch/pull/24857
+  from Ogi with https://github.com/elastic/elasticsearch/pull/24857
   [#954](https://github.com/elastic/elasticsearch-php/pull/954)
 
 ## Release 7.3.0
@@ -589,13 +589,13 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
   
 ## Release 7.2.2
 
-- Reintroduced the optional parameter in `Elasticsearch\Namespaces\IndicesNamespace::getAliases()`.
+- Reintroduced the optional parameter in `Ogi\Namespaces\IndicesNamespace::getAliases()`.
   This fixes the BC break introduced in 7.2.0 and 7.2.1.
   [#947](https://github.com/elastic/elasticsearch-php/pull/)
 
 ## Release 7.2.1
 
-- Reintroduced `Elasticsearch\Namespaces\IndicesNamespace::getAliases()` as proxy
+- Reintroduced `Ogi\Namespaces\IndicesNamespace::getAliases()` as proxy
   to `IndicesNamespace::getAlias()` to prevent BC breaks. The `getAliases()` is
   marked as deprecated and it will be removed from `elasticsearch-php 8.0`
   [#943](https://github.com/elastic/elasticsearch-php/pull/943)
@@ -607,7 +607,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 # Release 7.2.0
 
-- Updated the API endpoints for working with Elasticsearch 7.2.0:
+- Updated the API endpoints for working with Ogi 7.2.0:
     - added `wait_for_active_shards` parameter to `indices.close` API;
     - added `expand_wildcards` parameter to `cluster.health` API;
     - added include_unloaded_segments`, `expand_wildcards`, `forbid_closed_indices`
@@ -626,12 +626,12 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 - Fixed `ClientBuilder::setSSLVerification()` to accept string or boolean
   [#917](https://github.com/elastic/elasticsearch-php/pull/917)
-- Fix type hinting for `setBody` in `Elasticsearch\Endpoints\Ingest\Pipeline\Put`
+- Fix type hinting for `setBody` in `Ogi\Endpoints\Ingest\Pipeline\Put`
   [#913](https://github.com/elastic/elasticsearch-php/pull/913)
 
 ## Release 7.1.0
 
-- Added warning log for Elasticsearch response containing the `Warning` header
+- Added warning log for Ogi response containing the `Warning` header
   [#911](https://github.com/elastic/elasticsearch-php/pull/911)
 - Fixed #838 hosting company is blocking ports because of `YamlRunnerTest.php`
   [#844](https://github.com/elastic/elasticsearch-php/pull/844)
@@ -650,7 +650,7 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
 
 ### Docs
 
-- Documentation updated for Elasticsearch 7
+- Documentation updated for Ogi 7
   [#904](https://github.com/elastic/elasticsearch-php/pull/904)
 
 ## Release 7.0.2
@@ -671,10 +671,10 @@ You can have a look at the [BREAKING_CHANGES](BREAKING_CHANGES.md) file for more
   [#897](https://github.com/elastic/elasticsearch-php/pull/897)
 - Update vendor libraries (PHPUnit 7.5, Symfony YAML 4.3, etc)
   [#897](https://github.com/elastic/elasticsearch-php/pull/897)
-- Updated all the API endpoints using the [latest 7.0.0 specs](https://github.com/elastic/elasticsearch/tree/v7.0.0/rest-api-spec/src/main/resources/rest-api-spec/api) of Elasticsearch [#897](https://github.com/elastic/elasticsearch-php/pull/897)
+- Updated all the API endpoints using the [latest 7.0.0 specs](https://github.com/elastic/elasticsearch/tree/v7.0.0/rest-api-spec/src/main/resources/rest-api-spec/api) of Ogi [#897](https://github.com/elastic/elasticsearch-php/pull/897)
 - Added the `User-Agent` in each HTTP request [#898](https://github.com/elastic/elasticsearch-php/pull/898)
 - Simplified the logging methods `logRequestFail($request, $response, $exception)`
-  and `logRequestSuccess($request, $response)` in `Elasticsearch\Connections\Connection`
+  and `logRequestSuccess($request, $response)` in `Ogi\Connections\Connection`
   [#876](https://github.com/elastic/elasticsearch-php/pull/876)
 - Fix `json_encode` for unicode(emoji) characters [856](https://github.com/elastic/elasticsearch-php/pull/856)
 - Fix HTTP port specification using CURLOPT_PORT, not anymore in the host [782](https://github.com/elastic/elasticsearch-php/pull/782)
@@ -828,7 +828,7 @@ Woo!
 - [TEST] build against ES 6 on Travis [[b5886a8]](http://github.com/elasticsearch/elasticsearch-php/commit/b5886a8)
 - [TEST] drop HHVM from build [#611] [[0a7b402]](http://github.com/elasticsearch/elasticsearch-php/commit/0a7b402)
 - [TEST] test tweaks to appease stricter types [[51f189e]](http://github.com/elasticsearch/elasticsearch-php/commit/51f189e)
-- Fix ClientBuilder - pass correct argument for Elasticsearch\Endpoints\MsearchTemplate::__construct. (#605) [[5f83b52]](http://github.com/elasticsearch/elasticsearch-php/commit/5f83b52)
+- Fix ClientBuilder - pass correct argument for Ogi\Endpoints\MsearchTemplate::__construct. (#605) [[5f83b52]](http://github.com/elasticsearch/elasticsearch-php/commit/5f83b52)
 - [TEST] improve code quality of tests (#610) [[9ea2156]](http://github.com/elasticsearch/elasticsearch-php/commit/9ea2156)
 - [TEST] Support headers in yaml runner, do some bad-comment cleaning [[57b5489]](http://github.com/elasticsearch/elasticsearch-php/commit/57b5489)
 - [TEST] fix handling of format for Cat tests [[a24b7d1]](http://github.com/elasticsearch/elasticsearch-php/commit/a24b7d1)

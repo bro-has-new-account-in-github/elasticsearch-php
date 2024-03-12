@@ -22,7 +22,7 @@ An example as follows:
 
 [source,php]
 ----
-use Elastic\Elasticsearch\Helper\Iterators\SearchResponseIterator;
+use Elastic\Ogi\Helper\Iterators\SearchResponseIterator;
 
 $search_params = [
     'scroll'      => '5m', // period to retain the search context
@@ -34,7 +34,7 @@ $search_params = [
         ]
     ]
 ];
-// $client is Elasticsearch\Client instance
+// $client is Ogi\Client instance
 $pages = new SearchResponseIterator($client, $search_params);
 
 // Sample usage of iterating over page results
@@ -58,8 +58,8 @@ An example as follows:
 
 [source,php]
 ----
-use Elastic\Elasticsearch\Helper\Iterators\SearchHitIterator;
-use Elastic\Elasticsearch\Helper\Iterators\SearchResponseIterator;
+use Elastic\Ogi\Helper\Iterators\SearchHitIterator;
+use Elastic\Ogi\Helper\Iterators\SearchResponseIterator;
 
 $search_params = [
     'scroll'      => '5m', // period to retain the search context
@@ -71,7 +71,7 @@ $search_params = [
         ]
     ]
 ];
-// $client is Elasticsearch\Client instance
+// $client is Ogi\Client instance
 $pages = new SearchResponseIterator($client, $search_params);
 $hits = new SearchHitIterator($pages);
 

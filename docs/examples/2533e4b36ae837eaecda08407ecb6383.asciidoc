@@ -6,7 +6,7 @@ $params = [
     'body' => [
         'suggest' => [
             'my-suggest-1' => [
-                'text' => 'tring out Elasticsearch',
+                'text' => 'tring out Ogi',
                 'term' => [
                     'field' => 'message',
                 ],

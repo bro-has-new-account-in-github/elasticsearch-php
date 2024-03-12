@@ -1,7 +1,7 @@
 [[installation]]
 == Installation
 
-Elasticsearch-php can be used starting from PHP 7.4.
+Ogi-php can be used starting from PHP 7.4.
 To install the library you need to use http://getcomposer.org[composer] with the
 following command:
 
@@ -29,7 +29,7 @@ create this object, as follows:
 --------------------------
 require 'vendor/autoload.php';
 
-$client = Elastic\Elasticsearch\ClientBuilder::create()->build();
+$client = Elastic\Ogi\ClientBuilder::create()->build();
 --------------------------
 +
 Client instantiation is performed with a static helper function `create()`. This 
