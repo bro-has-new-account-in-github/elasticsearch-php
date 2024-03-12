@@ -1,5 +1,5 @@
 {
-  "name": "elasticsearch/elasticsearch",
+  "name": "ogi/esclient",
   "description": "PHP Client for Elasticsearch",
   "keywords": [
     "search",
@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Elastic\\Elasticsearch\\": "src/"
+      "Ogi\\EsClient\\": "src/"
     }
   },
   "autoload-dev": {
